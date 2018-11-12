@@ -1,12 +1,12 @@
-def scrape():
-    # import dependencies
-    import pandas as pd
-    from splinter import Browser
-    from bs4 import BeautifulSoup
-    import requests
-    import pymongo
-    import time
+# import dependencies
+import pandas as pd
+from splinter import Browser
+from bs4 import BeautifulSoup
+import requests
+import pymongo
+import time
 
+def scrape():
     # Store dictionary of scraped results
     results={}
 
@@ -62,7 +62,7 @@ def scrape():
     # Retrieve page with the requests module
     response = requests.get(url)
     # Create BeautifulSoup object; parse with 'html'
-    soup = BeautifulSoup(response.text, 'html', features='lxml')
+    soup = BeautifulSoup(response.text, 'html')
 
     result = soup.find('p',class_='tweet-text')
 
