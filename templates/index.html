@@ -14,7 +14,7 @@
     <div class="container">
         <div class="jumbotron text-center">
             <h1>Mission to Mars</h1>
-            <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+            <p><a class="btn btn-primary btn-g" href="/scrape" role="button">Scrape New Data</a></p>
         </div>
         <div class="row">
           <div class="col-md-12">
@@ -28,9 +28,19 @@
             <h3><b>Featured Mars Image</b></h3>
             <img src={{ returns['featured_image_url'] }} alt="Featured Image" class="img-responsive">
           </div>
+          <div class="col-md-4">
+              <h4><b>Current Weather on Mars</b></h4>
+              <p>{{ returns['mars_weather']}}</p>
+
+              <br>
+
+              <h4><b>Mars Facts</b></h4>
+                {{ returns['mars_table'] }}
+          </div>
         </div>
 
         <br>
+
         <div class="row">
           <div class="col-md-12">
             <div class="container">
